@@ -1,6 +1,6 @@
 # 🔮 Peter Answers (Pedro Responde) – Mystical Web App
 
-[![Docker Hub](https://img.shields.io/docker/pulls/elemusbarrios/rest-express.svg)](https://hub.docker.com/r/elemusbarrios/peter-answers)
+[![Docker Hub](https://img.shields.io/docker/pulls/elemusbarrios/rest-express.svg)](https://hub.docker.com/layers/elemusbarrios/peter-answers/latest)
 [![GitHub license](https://img.shields.io/github/license/EliabLemus/dataclean.svg)](./LICENSE)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![Made with TypeScript](https://img.shields.io/badge/Made%20with-TypeScript-3178C6.svg)
