@@ -25,17 +25,19 @@ WORKDIR /app
 # Copia solo lo necesario para instalar deps de producción
 COPY package.json package-lock.json ./
 
-# Instala SOLO prod deps (express, etc. externos al bundle)
-RUN npm ci --omit=dev && npm cache clean --force
+# Instala prod deps y añade vite (temporalmente)
+RUN npm ci --include=dev && npm cache clean --force
+
 
 # Copiamos artefactos listos
 COPY --from=builder /app/dist ./dist
 
 # Usuario no root por seguridad
 RUN addgroup -S nodeapp && adduser -S nodeapp -G nodeapp
-USER nodeapp
+USER root
 
 EXPOSE 3000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 CMD node -e "fetch('http://127.0.0.1:3000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
 
-CMD ["node", "dist/index.js"]
+CMD ["node", "--experimental-specifier-resolution=node", "dist/index.js"]
+

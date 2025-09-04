@@ -1,0 +1,62 @@
+# --- Dependencias ---
+node_modules/
+**/node_modules/
+
+# --- Builds y artefactos ---
+dist/
+build/
+out/
+.next/
+storybook-static/
+
+# Si tu frontend genera build propio dentro de client/
+client/dist/
+
+# --- Cachés de herramientas ---
+.vite/
+.eslintcache
+.stylelintcache
+.cache/
+parcel-cache/
+.pnpm-store/
+.npm/
+.yarn/
+
+# --- TypeScript ---
+*.tsbuildinfo
+
+# --- Logs ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# --- Entornos (mantén un .env.example para referencia) ---
+.env
+.env.*
+!.env.example
+
+# --- SO / Editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# --- Cobertura ---
+coverage/
+.nyc_output/
+
+# --- Temporales ---
+tmp/
+temp/
+*.tmp
+
+# --- Archivos y empaques ---
+*.zip
+*.tar
+*.tar.gz
+
+# --- Docker (si usas overrides locales) ---
+docker-compose.override.yml

@@ -1,11 +1,11 @@
 # ---------- overridable ----------
 REGISTRY        ?= docker.io
 DOCKER_USER     ?= elemusbarrios
-IMAGE_NAME      ?= rest-express
+IMAGE_NAME      ?= peter-answers
 CONTEXT_DIR     ?= .
 DOCKERFILE_PATH ?= $(CONTEXT_DIR)/Dockerfile
 
-TAGS            ?= latest 1.0.0
+TAGS            ?= latest 1.0.1
 
 # Puerto interno expuesto por el contenedor (server Node en prod)
 INTERNAL_PORT   ?= 3000

@@ -1,6 +1,6 @@
 # 🔮 Peter Answers (Pedro Responde) – Mystical Web App
 
-[![Docker Hub](https://img.shields.io/docker/pulls/elemusbarrios/rest-express.svg)](https://hub.docker.com/r/elemusbarrios/rest-express)
+[![Docker Hub](https://img.shields.io/docker/pulls/elemusbarrios/rest-express.svg)](https://hub.docker.com/r/elemusbarrios/peter-answers)
 [![GitHub license](https://img.shields.io/github/license/EliabLemus/dataclean.svg)](./LICENSE)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![Made with TypeScript](https://img.shields.io/badge/Made%20with-TypeScript-3178C6.svg)
@@ -109,6 +109,99 @@ The app features a crystal ball interface with floating orbs, supports both Engl
 - **EasyPanel Ready**: The published Docker image can be deployed directly to EasyPanel with exposed port `3000`.
 
 ---
+
+## 🔮 How the Trick Works (Secret Mode)
+
+This app recreates the classic **“Peter Answers / Pedro Responde”** game.  
+The trick is simple: you secretly type the real answer in the **Request** field while everyone else sees a normal ceremonial phrase.
+
+---
+
+### 🧠 Core idea
+
+- There are two inputs: **Request** (ceremonial phrase) and **Question** (what you ask).
+- You type your **real answer** *hidden* between two periods `.` inside the **Request** field.
+- While you type the hidden text, the screen shows the normal phrase:
+  > `Peter, please answer this question...`
+- When you **close the hidden answer** with another `.` (period), secret mode ends.  
+  You can then finish the ceremonial sentence normally.
+- Type the **Question** (e.g., “Will it rain today?”) and click **Ask** — the app will display the hidden answer.
+
+---
+
+### ✍️ Step by step
+
+1. Focus the **Request** field.
+2. Start with a period `.` and **type your real answer** (this stays hidden).  
+   - Example: `.Yes, take an umbrella`
+3. Close the answer with another period `.` (you exit secret mode).
+4. Continue typing anything to complete the phrase, e.g.  
+   `Peter, please answer this question:`
+5. In the **Question** field, type the question (e.g., `Will it rain today?`).
+6. Press **Ask** → Output: `Yes, take an umbrella`.
+
+---
+
+### 🧩 Quick example
+
+- **What you actually type in Request**  
+  ```
+  .Tomorrow at 7:15, by the blue door.Peter, please answer this question:
+  ```
+- **Question**  
+  ```
+  What time and where will it be?
+  ```
+- **Result after clicking “Ask”**  
+  ```
+  Tomorrow at 7:15, by the blue door.
+  ```
+
+---
+
+### ✅ Key rules
+
+- Always **open and close** the hidden answer with `.` inside **Request**.
+- Everything **between the two dots** is the real answer.
+- After the second `.`, you’re out of secret mode; type the ceremonial phrase normally.
+- The **Question** just triggers the reveal — the answer is what you hid.
+
+---
+
+### 🧪 Tips for a perfect demo
+
+- Practice the `.` → (answer) → `.` gesture a couple of times.
+- When in secret mode, **type without looking at the screen** to avoid giving it away.
+- If you make a mistake, **backspace** before closing with the second `.`.
+- Keep answers short and natural.
+
+---
+
+### ❓ FAQ
+
+**I forgot to close with `.` — now what?**  
+Clear the Request field and start again.
+
+**Does it work on mobile?**  
+Yes, but it’s easier with a physical keyboard.
+
+**I used the dots but nothing shows.**  
+Make sure your answer was **between** the two dots and you clicked **Ask**.
+
+---
+
+### ⚠️ Please use responsibly
+
+This is a party trick for fun and entertainment. Don’t use it to deceive or harm others.
+
+---
+
+### 🛠️ Technical note (for the curious)
+
+- The Request field watches for a leading `.`. Until the second `.`, keystrokes go into a **hidden buffer** while the UI prints the ceremonial phrase.
+- After the second `.`, the field behaves normally.
+- On **Ask**, the app returns the **hidden buffer** as the final answer.
+
 
 # License
 
