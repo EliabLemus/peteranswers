@@ -1,13 +1,19 @@
+# 🔮 Peter Answers (Pedro Responde) – Mystical Web App
+
+[![Docker Hub](https://img.shields.io/docker/pulls/elemusbarrios/rest-express.svg)](https://hub.docker.com/r/elemusbarrios/rest-express)
+[![GitHub license](https://img.shields.io/github/license/EliabLemus/dataclean.svg)](./LICENSE)
+![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)
+![Made with TypeScript](https://img.shields.io/badge/Made%20with-TypeScript-3178C6.svg)
+![Framework: React](https://img.shields.io/badge/Frontend-React-61DAFB.svg)
+![Backend: Express](https://img.shields.io/badge/Backend-Express-000000.svg)
+
+---
+
 # Overview
 
 This project is a full-stack web application inspired by the mystical "Peter Answers" (Pedro Responde) game – an interactive fortune-telling website where users can ask questions and receive mysterious answers.  
 
 The app features a crystal ball interface with floating orbs, supports both English and Spanish languages, and includes a hidden “secret mode” for predetermined responses. It’s built with a modern stack: React frontend, Express backend, PostgreSQL database, and TypeScript for type safety.
-
-# User Preferences
-
-Preferred communication style: Simple, everyday language.  
-The app’s design is playful, accessible, and easy to use for anyone curious about mystical answers.
 
 ---
 
