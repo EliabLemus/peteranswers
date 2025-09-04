@@ -6,6 +6,7 @@
 ![Made with TypeScript](https://img.shields.io/badge/Made%20with-TypeScript-3178C6.svg)
 ![Framework: React](https://img.shields.io/badge/Frontend-React-61DAFB.svg)
 ![Backend: Express](https://img.shields.io/badge/Backend-Express-000000.svg)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Open%20now-2ea44f?logo=google-chrome&logoColor=white)](https://peteranswers.zfrap0.easypanel.host/)
 
 ---
 
